@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:text="SIPTATIF"
+        android:layout_marginTop="20dp"
         android:textColor="@color/blue"
         android:textSize="40dp"
         android:textStyle="bold" />

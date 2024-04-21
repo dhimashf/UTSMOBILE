@@ -15,63 +15,42 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
     private DrawerLayout drawerLayout;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
-
         drawerLayout = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav,
+                R.string.close_nav);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                drawerLayout.closeDrawer(GravityCompat.START);
-            } else {
-                drawerLayout.openDrawer(GravityCompat.START);
-            }
-            return true;
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            navigationView.setCheckedItem(R.id.nav_home);
         }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.nav_home:
-                // Tindakan untuk menu Home
-                Toast.makeText(MainActivity.this, "Home Selected", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_datamahasiswa:
-                // Tindakan untuk menu Data Mahasiswa
-                Toast.makeText(MainActivity.this, "Data Mahasiswa Selected", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_pembimbing:
-                // Tindakan untuk menu Pembimbing
-                Toast.makeText(MainActivity.this, "Pembimbing Selected", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_penguji:
-                // Tindakan untuk menu Penguji
-                Toast.makeText(MainActivity.this, "Penguji Selected", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_logout:
-                // Tindakan untuk menu Logout
-                Toast.makeText(MainActivity.this, "Logout Selected", Toast.LENGTH_SHORT).show();
-                break;
+
+        int itemId = item.getItemId();
+        if (itemId == R.id.nav_home) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        } else if (itemId == R.id.nav_datamahasiswa) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DataMahasiswaFragment()).commit();
+        } else if (itemId == R.id.nav_pembimbing) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PembimbingFragment()).commit();
+        } else if (itemId == R.id.nav_penguji) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PengujiFragment()).commit();
+        } else {
+            Intent intentlogout = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intentlogout);
+            finish();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

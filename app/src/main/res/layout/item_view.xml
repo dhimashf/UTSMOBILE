@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/custom_edittext"
+    android:backgroundTint="@color/blue"
+    android:layout_marginVertical="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="30dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:text="Nama" />
+
+
+    <TextView
+        android:id="@+id/nim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/name"
+        android:textColor="@color/white"
+        tools:text="Nim" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nim"
+        android:textColor="@color/white"
+        tools:text="Email" />
+
+    <TextView
+        android:id="@+id/judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/email"
+        android:textColor="@color/white"
+        tools:text="Judul" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/judul"
+        android:textColor="@color/white"
+        tools:text="Status" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/status"
+        android:layout_height="40dp"
+        android:layout_marginEnd="10dp"
+        android:text="Edit" />
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/status"
+        android:layout_toRightOf="@id/editButton"
+        android:layout_marginStart="10dp"
+        android:text="Hapus" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/deleteButton"
+        android:layout_marginTop="20dp"
+        android:background="#DAD8D8"/>
+
+</RelativeLayout>

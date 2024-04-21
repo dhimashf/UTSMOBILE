@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <View
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/blue"
+        android:text="TextView" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:padding="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="40dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:textSize="16sp"
+        android:text="@string/lorem_ipsum"
+        />
+
+    <TextView
+        android:layout_width="113dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:text="KOORDINATOR TA"
+        android:textColor="@color/black"
+        android:textSize="12dp"/>
+</FrameLayout>

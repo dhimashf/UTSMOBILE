@@ -1,0 +1,359 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditDataMahasiswaFragment">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Berkas Mahasiswa"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp" /> <!-- Menambahkan margin di kiri dan atas -->
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Input Dosen Penguji"
+        android:layout_gravity="end|top"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="16dp" /> <!-- Menambahkan margin di kanan dan atas -->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="64dp"> <!-- Menyesuaikan jarak antara tombol dan formulir -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis  : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextJenis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Seminar Proposal"
+                android:textSize="15dp"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Nama :"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextNama"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Dhimas Hadid"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Nim     :"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextNim"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="12250111231"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Email  : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Dhimas@gmail.com"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Judul  : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextJudul"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Siptatif"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Kategori:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextKategori"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Skripsi"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Pembimbing 1 :"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextPembimbing1"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Fulan S.T.,M.T."
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Pembimbing 2 :"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextPembimbing2"
+                android:layout_width="0dp"
+                android:layout_marginRight="20dp"
+                android:textSize="15dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/custom_edittext2"
+                android:text="Fulan S.T.,M.T."
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Cek Berkas :"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:layout_width="200dp"
+                android:id="@+id/buttonCekBerkas"
+                android:layout_marginRight="20dp"
+                android:textSize="10dp"
+                android:layout_height="30dp"
+                android:background="@drawable/custom_edittext2"
+                android:text="Cek"
+                android:paddingLeft="20dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginTop="10dp"> 
+
+            <TextView
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content"
+                android:text="Catatan Untuk Mahasiswa"
+                android:textColor="@color/black" 
+                android:background="@drawable/custom_edittext"
+                android:paddingLeft="20dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum"
+                android:textColor="@color/black"
+                android:background="@drawable/custom_edittext2"
+                android:paddingLeft="20dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"> <!-- Menambahkan margin top -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="Status Berkas : "
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start">
+
+            <CheckBox
+                android:id="@+id/checkboxditerima"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Diterima"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+            <CheckBox
+                android:id="@+id/checkboxditolak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Ditolak"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>
